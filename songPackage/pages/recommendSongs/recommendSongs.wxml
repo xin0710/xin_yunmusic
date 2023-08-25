@@ -1,8 +1,8 @@
-<!--pages/recommendSong/recommendSong.wxml-->
+<!--pages/recommendSongs/recommendSongs.wxml-->
 <view class="recommendSongsContainer">
   <!-- 顶部区域 -->
   <view class="topContainer">
-    <image src="/static/images/recommendSong/blog3.png"/>
+    <image src="/static/images/blog3.png"/>
     <view class="date">
       <text class="mouth">{{month}} </text>
       <text>/ {{day}}</text>

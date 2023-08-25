@@ -1,4 +1,4 @@
-// pages/recommendSong/recommendSong.js
+// pages/recommendSongs/recommendSongs.js
 import request from '../../../utils/request'
 import PubSub from 'pubsub-js'
 Page({

@@ -1,6 +1,6 @@
 <view class="personalContainer">
   <view class="user-section">
-    <image class="bg" src="/static/images/personal/blog3.png"></image>
+    <image class="bg" src="/static/images/blog3.png"></image>
     <view class="user-info-box" bindtap="toLogin">
       <view class="portrait-box">
         <image class="portrait" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"/static/images/personal/missing-face.png"}}'></image>
