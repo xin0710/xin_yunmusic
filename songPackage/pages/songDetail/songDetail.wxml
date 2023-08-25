@@ -1,0 +1,55 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songDetailContainer">
+  <view class="backgroundImage">
+    <image src="{{musicDetail[0].al.picUrl}}"/>
+  </view>
+  <!-- 歌手名 -->
+  <view class="songAuthors">
+    {{musicDetail[0].ars}}
+  </view>
+  <!-- 底座 -->
+  <view class="needleBase">
+    <view class="needleBasePoint"></view>
+  </view>
+  <!-- 摇杆 -->
+  <view class="needle {{isPlay && 'needleRotate'}}">
+    <image src="/static/images/song/needle.png"/>
+  </view>
+  <!-- 磁盘 -->
+  <view class="discContainer {{isPlay && 'discRotate'}}">
+    <image class="disc" src="/static/images/song/disc.png"/>
+    <image class="musicImage" src="{{musicDetail[0].al.picUrl}}"/>
+  </view>
+  <!-- 进度条区域 -->
+  <view class="musicProgress">
+    <view class="timeStamp">
+      <text>{{nowTime}}</text>
+    </view>
+    <slider class="musicSlider" bindchange="sliderChange" activeColor="red" block-color="#d43c33" block-size="12" min="0" max="{{max}}" value="{{audioTime}}"/>
+    <view class="timeStamp">
+      <text>{{allTime}}</text>
+    </view>
+  </view>
+  <!-- 控制区域 -->
+  <view class="controls">
+    <view class="control" bindtap="changeModel">
+      <text wx:if="{{model===1}}" class="iconfont icon-liebiao2"></text>
+      <text wx:elif="{{model===2}}" class="iconfont icon-24gl-repeat"></text>
+      <text wx:elif="{{model===3}}" class="iconfont icon-24gl-repeatOnce"></text>
+      <text wx:else class="iconfont icon-24gl-shuffle"></text>
+    </view>
+    <view class="control">
+      <text class="iconfont icon-shangyishoushangyige" id="pre" bindtap="switchMusic"></text>
+    </view>
+    <view class="control" bindtap="playMusic">
+      <text wx:if="{{isPlay}}" class="iconfont icon-zanting"></text>
+      <text wx:else class="iconfont icon-24gf-playCircle"></text>
+    </view>
+    <view class="control">
+      <text class="iconfont icon-xiayigexiayishou" id="next" bindtap="switchMusic"></text>
+    </view>
+    <view class="control">
+      <text class="iconfont icon-24gf-playlist3"></text>
+    </view>
+  </view>
+</view>

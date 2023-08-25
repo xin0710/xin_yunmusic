@@ -1,0 +1,6 @@
+<!--componts/NavHeader/NavHeader.wxml-->
+<view class="recommendNav">
+  <text class="recommendTitle">{{title}}</text>
+  <button class="recommendMore" style="width: 140rpx;">{{btn}}<text class="iconfont icon-xiangyou1"></text>
+  </button>
+</view>

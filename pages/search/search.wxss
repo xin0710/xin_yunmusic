@@ -1,0 +1,148 @@
+/* 搜索框 */
+.searchContainer{
+  padding: 10rpx;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.searchBox{
+  display: flex;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #eee;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.icon-sousuo{
+  width: 6%;
+  text-align: right;
+}
+.searchInput{
+  padding-left: 20rpx;
+  width: 80%;
+  height: 60rpx;
+  box-sizing: border-box;
+}
+.cancel{
+  width: 14%;
+  height: 60rpx;
+  font-size: small;
+  text-align: center;
+  background-color: #d43c33;
+  color: white;
+  border-left: 2rpx solid rgb(196, 194, 194);
+}
+
+/* 热搜榜 */
+.searchTopBox{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 1050rpx;
+}
+.searchTopText{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.searchTopList{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 1000rpx;
+  border-top: 1rpx solid #eee;
+}
+.searchTopItem{
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.searchTopItem:nth-child(-n+3){
+  font-weight: bold;
+}
+.itemIndex{
+  padding-right: 10rpx;
+  width: 20%;
+  text-align: right;
+  box-sizing: border-box;
+}
+.searchTopName{
+  display:-webkit-box;
+  width: 60%;
+  height: 100rpx;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.searchTopIcon{
+  position: relative;
+  width: 20%;
+  height: 100rpx;
+}
+.searchTopIcon image{
+  position: relative;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+/* 搜索列表 */
+.searchListShow{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 1050rpx;
+  box-sizing: border-box;
+}
+.searchContext{
+  padding-left: 40rpx;
+  width: 100%;
+  height: 50rpx;
+  font-size: small;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  color: rgb(61, 145, 214);
+}
+.searchItems{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.searchItem{
+  display: flex;
+  width: 100%;
+}
+.searchIcon{
+  width: 10%;
+  text-align: right;
+}
+.searchName{
+  padding: 0 10rpx;
+  display: -webkit-box;
+  width: 30%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  box-sizing: border-box;
+}
+.searchDetails{
+  display: -webkit-box;
+  width: 60%;
+  font-size: small;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  opacity: .8;
+}

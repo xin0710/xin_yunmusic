@@ -1,0 +1,28 @@
+/* componts/NavHeader/NavHeader.wxss */
+@import '/static/iconfont/iconfont.wxss';
+
+.recommendNav{
+  height: 100rpx;
+}
+.recommendTitle{
+  position: relative;
+  left: 30rpx;
+  float: left;
+  font-size: large;
+  font-weight: bold;
+  line-height: 100rpx;
+}
+.recommendMore{
+  position: relative;
+  padding: 0;
+  top: 50%;
+  right: 20rpx;
+  float: right;
+  height: 60rpx;
+  font-size: medium;
+  line-height: 60rpx;
+  text-align: center;
+  transform: translate(0,-50%);
+  border-radius: 30rpx;
+  border: 1px solid #E4E6ED;
+}

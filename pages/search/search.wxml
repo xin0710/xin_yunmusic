@@ -1,0 +1,42 @@
+<view class="searchContainer">
+<!-- 搜索框 -->
+  <view class="searchBox">
+    <text class="iconfont icon-sousuo"></text>
+    <input class="searchInput" type="text" placeholder="{{searchDefault}}" 	bindinput="getSearchInput" value="{{searchContext}}"/>
+    <text class="cancel" bindtap="cancelSearch">取消</text>
+  </view>
+
+  <!-- 搜索列表 -->
+  <view wx:if="{{searchContext}}" class="searchListShow">
+    <view class="searchContext">
+      搜索内容"{{searchContext}}"
+    </view>
+    <view class="searchItems">
+      <view class="searchItem" wx:for="{{searchList}}" wx:key="id">
+        <view class="searchIcon">
+          <text class="iconfont icon-sousuo"></text>
+        </view>
+        <view class="searchName">
+          {{item.name}}
+        </view>
+        <view class="searchDetails">
+          {{item.al.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 热搜榜 -->
+  <view wx:else class="searchTopBox">
+    <view class="searchTopText">热搜榜</view>
+    <view class="searchTopList">
+      <view class="searchTopItem" wx:for="{{topList}}" wx:key="score">
+        <view class="itemIndex">{{index+1}}</view>
+        <view class="searchTopName">{{item.searchWord}}</view>
+        <view wx:if="{{item.iconUrl}}" class="searchTopIcon">
+          <image src="{{item.iconUrl}}" mode="widthFix"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

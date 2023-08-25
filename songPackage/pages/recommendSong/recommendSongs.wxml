@@ -1,0 +1,50 @@
+<!--pages/recommendSong/recommendSong.wxml-->
+<view class="recommendSongsContainer">
+  <!-- 顶部区域 -->
+  <view class="topContainer">
+    <image src="/static/images/recommendSong/blog3.png"/>
+    <view class="date">
+      <text class="mouth">{{month}} </text>
+      <text>/ {{day}}</text>
+    </view>
+  </view>
+
+  <!-- 列表区域 -->
+  <view class="listContainer">
+    <!-- 顶部布局 -->
+    <view class="listTop">
+      <view class="playAllIcon">
+        <text class="iconfont icon-24gf-playCircle"></text>
+      </view>
+      <view class="playAllText">
+        <text>播放全部</text>
+      </view>
+      <view class="selectCheck">
+        <text class="iconfont icon-duoxuankuang"></text>
+      </view>
+    </view>
+    <!-- 歌曲列表 -->
+    <scroll-view 
+      class="songList" 
+      scroll-y
+    >
+      <view class="songItem" wx:for="{{songList}}" wx:key="id" data-index="{{index}}" data-songId="{{item.id}}" data-songArs="{{item.ars}}" bindtap="toSongDetail">
+        <view class="songImage">
+          <image src="{{item.al.picUrl}}"/>
+        </view>
+        <view class="songNameAndAuthors">
+          <view class="songName">
+            {{item.al.name}}
+          </view>
+          <view class="songAuthors">
+            {{item.ars}}
+          </view>
+        </view>
+        <view class="songSetting">
+          <text class="iconfont icon-gengduo-shuxiang"></text>
+        </view>
+      </view>
+      <view style="opacity: 0;width: 0;height: 0;">-</view>
+    </scroll-view>
+  </view>
+</view>
